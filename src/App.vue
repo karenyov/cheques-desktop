@@ -1,32 +1,42 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view />
-  </div>
+  <v-app>
+    <dashboard-core-app-bar v-if="isAuth"/>
+    <dashboard-core-drawer v-if="isAuth" />
+
+    <v-main>
+      <v-container fluid>
+        <v-row class="fill-height">
+          <v-col>
+            <transition name="fade">
+              <router-view></router-view>
+            </transition>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+    <dashboard-core-footer />
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import HelloWorld from "./components/HelloWorld";
 
-nav {
-  padding: 30px;
+export default {
+  name: "App",
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  components: {
+    DashboardCoreAppBar: () => import('./components/core/AppBar'),
+    DashboardCoreDrawer: () => import('./components/core/Drawer'),
+    DashboardCoreFooter: () => import('./components/core/Footer'),
+  },
+  data: () => ({
+  }),
+  computed : {
+    isAuth() {
+      return this.$store.state.isAuth;
     }
   }
-}
-</style>
+};
+</script>
+
+

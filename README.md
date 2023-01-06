@@ -7,7 +7,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run electron:serve
 ```
 
 ### Compiles and minifies for production
@@ -20,5 +20,13 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Login Teste
+```
+usuario: teste
+senha: 123
+```
+
+# Screenshots
+<p align="center">
+  <img src="https://github.com/karenyov/cheques-desktop/blob/main/app.png" width="400">
+</p>
