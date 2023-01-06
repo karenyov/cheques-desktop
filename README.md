@@ -30,3 +30,4 @@ senha: 123
 <p align="center">
   <img src="https://github.com/karenyov/cheques-desktop/blob/main/app.png" width="400">
 </p>
+
