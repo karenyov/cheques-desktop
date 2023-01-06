@@ -28,6 +28,6 @@ senha: 123
 
 # Screenshots
 <p align="center">
-  <img src="https://github.com/karenyov/cheques-desktop/blob/master/app.png" width="400">
+  <img src="https://github.com/karenyov/cheques-desktop/blob/master/app.png" width="600">
 </p>
 
